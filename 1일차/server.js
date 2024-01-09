@@ -5,12 +5,14 @@ const app = express();
 
 let port = 3000;
 // express의 listen 메서드는 지정한 포트로 들어왔을 때 메서드를 실행하게 해주는 기능인듯
-app.listen(port, () => {});
+app.listen(port, () => {
+  console.log("hello");
+});
 
 // 서버는 클라이언트로 get,post,update,delete 행동을 하는데 get은 클라이언트에게 데이터를 보내주는 행위이다.
 app.get("/", (req, res) => {
-  //   res.send("안녕하세요 홈페이지 입니다.");
+  res.send("안녕하세요 홈페이지 입니다.");
 
   //sendFile을 통해서 html 파일을 보낼 수 있음
-  res.sendFile(__dirname + "/index.html");
+  // res.sendFile(__dirname + "/index.html");
 });
