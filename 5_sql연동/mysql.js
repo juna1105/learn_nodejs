@@ -4,17 +4,16 @@ const app = express();
 
 let connection = mysql.createConnection({
   host: "localhost",
-  user: "root",
-  password: "1111",
-  database: "node_js_test",
+  user: "your_trot",
+  password: "yourtrot36292178!",
+  database: "your_trot",
 });
 
 // sql 연결
 connection.connect((err) => {
   if (err) {
-    console.log(err);
+    console.log(`에러 발생: ${err}`);
   }
-  console.log("connected to MySQL!");
 });
 
 // 멤버 테이블 생성(CREATE)
@@ -77,9 +76,9 @@ const selectDataQuery = "SELECT * FROM Members";
 //   console.log(results);
 // });
 
-connection.end((err) => {
-  if (err) {
-    console.log(err);
-  }
-  console.log("end connection");
-});
+// connection.end((err) => {
+//   if (err) {
+//     console.log(err);
+//   }
+//   console.log("end connection");
+// });
